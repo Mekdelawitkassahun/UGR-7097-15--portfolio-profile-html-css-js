@@ -1,0 +1,420 @@
+/* General Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  background: linear-gradient(to bottom, #715a57, #958381, #b8adab);
+  color: white;
+  position: relative;
+  overflow: scroll;
+}
+
+/* Sidebar Styles (Desktop Only) */
+.sidebar {
+  width: 20%;
+  background-color: #3e2723;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.sidebar p {
+  font-size: 1rem;
+  color: #d7ccc8;
+}
+.sidebar-nav {
+  margin-top: -30px;
+}
+.sidebar-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+  margin-top: -30px;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 15px;
+  display: block;
+  margin: 5px 0;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar-nav a:hover {
+  background-color: #5d4037;
+}
+
+.social-links {
+  margin-top: auto;
+  display: flex;
+  gap: 7px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-top: -130px;
+}
+
+/* Profile Card Styles */
+.profile-card {
+  width: auto;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.profile-card .profile-image {
+  width: 150px;
+  height: 170px;
+  border-radius: 50%;
+  margin-top: 20px;
+  object-fit: cover;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card .name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.profile-card .title {
+  font-size: 1rem;
+  color: #f5e6e8;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: -6px;
+}
+
+.profile-card .social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.profile-card .social-links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.profile-card .social-links a:hover {
+  background: #8d6e63;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Main Content Styling */
+.main-content {
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  height: auto;
+  flex: 1;
+}
+
+.main-content h2 {
+  font-size: 32px;
+  margin-top: 0;
+  color: #ffffff;
+  margin-left: 10px; /* Reset the negative margin */
+  text-align: left; /* Ensure text aligns to the left */
+}
+
+.education-page {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 15px;
+  justify-content: start; /* Align items to the start by default */
+  max-width: 600px; /* Set a maximum width for the block */
+  margin-left: 400px; /* Move the entire block to the right */
+}
+
+.education-card {
+  background-color: #3e2723;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 0.5rem; /* Reduce overall font size */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* Align content in the center */
+}
+
+.education-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.education-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: white; /* Highlight color */
+}
+
+.education-card p {
+  font-size: 0.6rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+  width: 80%;
+}
+
+.education-summary {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+  /* padding: 10px; */
+  margin-left: 320px;
+  color: #ffffff;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    padding: 10px; /* Reduced padding for mobile */
+  }
+
+  .main-content h2 {
+    font-size: 28px; /* Adjust font size for mobile */
+    margin-top: 0; /* Remove any top margin */
+    margin-left: 0; /* Remove left margin */
+    text-align: left; /* Ensure the text aligns to the left */
+    width: 100%; /* Ensure it doesn't exceed container width */
+  }
+
+  .education-page {
+    display: grid;
+    grid-template-columns: 1fr; /* One item per row */
+    gap: 15px; /* Space between items */
+    justify-content: center; /* Center the content */
+    max-width: 90%; /* Set a maximum width for the grid */
+    margin: 0 auto; /* Center the grid on the page */
+  }
+
+  .education-card {
+    background-color: #3e2723;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 100%; /* Ensure it takes the full width of the container */
+    margin-top: 30px;
+  }
+
+  .education-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .education-card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .education-card p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+  }
+
+  .education-summary {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    padding: 10px;
+    color: #ffffff;
+    idth: 100%; /* Ensure it takes the full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-left: 0; /* Remove any left margin */
+    margin-right: 0; /* Remove any right margin */
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-icon {
+    display: block; /* Show the icon on mobile */
+    position: absolute;
+    top: 20px; /* Position it 20px from the top */
+    right: 5px; /* Position it 20px from the right */
+    font-size: 1.5rem; /* Icon size */
+    color: white; /* Icon color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    z-index: 1000; /* Ensure it's on top of other elements */
+  }
+
+  .sidebar.active {
+    display: block;
+    height: auto;
+    margin-top: -190px;
+    margin-right: -190px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+  }
+
+  .sidebar .profile-card,
+  .sidebar .social-links {
+    display: none; /* Hide the profile and social links in mobile view */
+  }
+
+  .sidebar-nav {
+    display: block; /* Only show the navigation links */
+  }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar.active {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .sidebar .profile-card,
+  .sidebar .social-links {
+    display: none; /* Hide the profile and social links in mobile view */
+  }
+
+  .sidebar-nav {
+    display: block; /* Only show the navigation links */
+  }
+
+  .main-content h2 {
+    font-size: 32px;
+    margin-top: -10px;
+    color: #ffffff;
+    margin-left: 10px; /* Reset the negative margin */
+
+    text-align: left; /* Ensure text aligns to the left */
+  }
+
+  .education-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items in one row */
+    gap: 15px; /* Space between grid items */
+    justify-content: center; /* Center the content */
+    max-width: 900px; /* Set a maximum width for the grid */
+    margin: 0 auto; /* Center the grid on the page */
+  }
+
+  .education-card {
+    background-color: #3e2723;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+
+  .education-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .education-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .education-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+  }
+  .education-summary {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
+    padding: 10px;
+    color: #ffffff;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+  }
+}

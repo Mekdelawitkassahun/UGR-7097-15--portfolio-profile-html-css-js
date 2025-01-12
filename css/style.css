@@ -1,0 +1,319 @@
+/* General Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(to bottom, #715a57, #958381, #b8adab);
+  color: white;
+  position: relative;
+  overflow: scroll;
+}
+
+/* Sidebar Styles (Desktop Only) */
+.sidebar {
+  width: 20%;
+  background-color: #3e2723;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  /* left: -100%; 
+  transition: left 0.3s ease; */
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.sidebar p {
+  font-size: 1rem;
+  color: #d7ccc8;
+}
+.sidebar-nav {
+  margin-top: -30px;
+}
+.sidebar-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+  margin-top: -30px;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 15px;
+  display: block;
+  margin: 5px 0;
+  border-radius: 5px;
+  position: relative; /* Ensure it stays above other elements */
+  z-index: 2; /* Make sure it's above other elements */
+}
+
+.sidebar-nav a:hover {
+  background-color: #5d4037;
+}
+
+.social-links {
+  margin-top: auto;
+  display: flex;
+  gap: 7px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-top: -130px;
+}
+
+/* Profile Card Styles */
+.profile-card {
+  width: auto;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.profile-card .profile-image {
+  width: 150px;
+  height: 170px;
+  border-radius: 50%;
+  margin-top: 20px;
+  object-fit: cover;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card .name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.profile-card .title {
+  font-size: 1rem;
+  color: #f5e6e8;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: -6px;
+}
+
+.profile-card .social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.profile-card .social-links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.profile-card .social-links a:hover {
+  background: #8d6e63;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 25%;
+  display: flex;
+  flex-direction: row; /* Arrange items in a row */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center items vertically */
+  height: 100%;
+  text-align: left; /* Align text to the left */
+  gap: 20px; /* Add spacing between image and text */
+}
+.main-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.main-content p {
+  font-size: 1.5rem;
+}
+
+.main-content img {
+  width: 800px;
+  height: 800px;
+  object-fit: cover;
+  margin-bottom: -20px;
+  margin-right: -250px;
+  margin-top: 200px;
+}
+
+.text-content {
+  position: relative;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: -300px;
+  font-family: Montserrat, sans-serif;
+}
+.text-content p {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-right: -300px;
+  margin-top: -8px;
+}
+
+.text-content .highlight {
+  position: relative;
+  z-index: 1; /* Keep the text above the background */
+  color: transparent; /* Hide the text color */
+}
+
+.text-content .highlight::after {
+  content: "n"; /* The last character */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("images/mekdi1.png") no-repeat center center;
+  background-size: cover; /* Cover the span area with the image */
+  -webkit-background-clip: text; /* Clip the image to text */
+  background-clip: text;
+  color: transparent; /* Text is only visible via the image */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-content h1 {
+    font-size: 1rem; /* Slightly larger font for better readability */
+  }
+
+  .text-content p {
+    font-size: 0.7rem;
+  }
+  .main-content img {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    margin-bottom: -20px;
+    margin-right: -250px;
+    margin-top: 200px;
+  }
+
+  .menu-icon {
+    display: block; /* Show the icon on mobile */
+    position: absolute;
+    top: 20px; /* Position it 20px from the top */
+    right: 5px; /* Position it 20px from the right */
+    font-size: 1.5rem; /* Icon size */
+    color: white; /* Icon color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    z-index: 1000; /* Ensure it's on top of other elements */
+  }
+
+  .sidebar.active {
+    display: block;
+    height: auto;
+    margin-top: -190px;
+    margin-right: -190px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+  }
+
+  .sidebar .profile-card,
+  .sidebar .social-links {
+    display: none; /* Hide the profile and social links in mobile view */
+  }
+
+  .sidebar-nav {
+    display: block; /* Only show the navigation links */
+  }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar.active {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .sidebar .profile-card,
+  .sidebar .social-links {
+    display: none; /* Hide the profile and social links in mobile view */
+  }
+
+  .sidebar-nav {
+    display: block; /* Only show the navigation links */
+  }
+
+  .text-content h1 {
+    font-size: 1.5rem; /* Slightly larger font for better readability */
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .menu-icon {
+    display: block; /* Show the icon on mobile */
+    position: absolute;
+    top: 20px; /* Position it 20px from the top */
+    right: 5px; /* Position it 20px from the right */
+    font-size: 1.5rem; /* Icon size */
+    color: white; /* Icon color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    z-index: 1000; /* Ensure it's on top of other elements */
+  }
+}

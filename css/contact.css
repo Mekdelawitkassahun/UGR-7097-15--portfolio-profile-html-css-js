@@ -1,0 +1,485 @@
+/* General Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(to bottom, #715a57, #958381, #b8adab);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sidebar Styles (Desktop Only) */
+.sidebar {
+  width: 20%;
+  background-color: #3e2723;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  /* left: -100%; 
+  transition: left 0.3s ease; */
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.sidebar p {
+  font-size: 1rem;
+  color: #d7ccc8;
+}
+
+.sidebar-nav {
+  margin-top: -30px;
+}
+
+.sidebar-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+  margin-top: -30px;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 15px;
+  display: block;
+  margin: 5px 0;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar-nav a:hover {
+  background-color: #5d4037;
+}
+
+.social-links {
+  margin-top: auto;
+  display: flex;
+  gap: 7px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-top: -130px;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.main-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.main-content p {
+  font-size: 1rem;
+  width: 90%;
+}
+
+.main-content img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Profile Card Styles */
+.profile-card {
+  width: auto;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.profile-card .profile-image {
+  width: 150px;
+  height: 170px;
+  border-radius: 50%;
+  margin-top: 20px;
+  object-fit: cover;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card .name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.profile-card .title {
+  font-size: 1rem;
+  color: #f5e6e8;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: -6px;
+}
+
+.profile-card .social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.profile-card .social-links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.profile-card .social-links a:hover {
+  background: #8d6e63;
+  color: white;
+  transform: scale(1.1);
+}
+
+.image-container {
+  display: flex;
+  gap: 10px;
+  /* Add space between the images */
+}
+
+.image-container img {
+  width: 300px;
+  /* Adjust width as needed */
+  height: 200px;
+  /* Maintain aspect ratio */
+  border-radius: 0%;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 20px;
+  /* Space between the two sections */
+  width: 90%;
+  max-width: 1200px;
+  height: 400px;
+  margin-left: 50px;
+}
+
+.contact-page,
+.contact-form {
+  flex: 1;
+  /* Equal width for both sections */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #3e2723;
+}
+
+.contact-page h2 {
+  margin-bottom: 20px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon i {
+  font-size: 40px;
+  color: #fff;
+  /* White icons */
+}
+
+.icon .label {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 30px;
+  color: #fff;
+}
+
+.icon p {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.icon div p:first-child {
+  margin-bottom: 5px;
+}
+
+.icon div {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  flex: 1;
+  width: 90%;
+}
+
+input,
+textarea,
+button {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+button {
+  color: #3e2723;
+  /* This will still apply to the text color */
+  border: 2px solid white;
+  /* Change the border color to white */
+  cursor: pointer;
+}
+footer {
+  background-color: #3e2723;
+  text-align: center;
+  color: white;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    display: flex;
+    /* Use Flexbox for layout */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin-top: 50px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-content img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+
+  .main-content h1 {
+    font-size: 2rem;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+  }
+
+  .menu-icon {
+    display: block;
+    /* Show the icon on mobile */
+    position: absolute;
+    top: 20px;
+    /* Position it 20px from the top */
+    right: 20px;
+    /* Position it 20px from the right */
+    font-size: 1.5rem;
+    /* Icon size */
+    color: white;
+    /* Icon color */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    z-index: 1000;
+    /* Ensure it's on top of other elements */
+  }
+
+  .sidebar.active {
+    display: block;
+    height: auto;
+    margin-top: -190px;
+    margin-right: -190px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Transparent background */
+  }
+
+  .sidebar .profile-card,
+  .sidebar .social-links {
+    display: none;
+    /* Hide the profile and social links in mobile view */
+  }
+
+  .sidebar-nav {
+    display: block;
+    /* Only show the navigation links */
+  }
+}
+
+.main-content h2 {
+  position: absolute;
+  top: 5px;
+  /* Distance from the top */
+  left: 20px;
+  /* Distance from the left */
+  font-size: 1.5rem;
+  /* Adjust the font size as needed */
+  font-weight: bold;
+  /* Make the header text bold */
+  color: white;
+  /* Set the text color */
+  z-index: 10;
+  /* Ensure the text is above other content */
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  overflow-y: auto;
+  /* Allow vertical scrolling */
+  height: 100%;
+  /* Ensure the body covers full height */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+    max-width: 760px;
+    margin-top: 50px;
+    overflow-y: auto;
+    /* Allow scrolling within the main content */
+    height: 100%;
+    /* Allow the content to fill the height */
+  }
+
+  .contact-container {
+    flex-direction: column;
+    /* Stack the sections vertically */
+    gap: 20px;
+    /* Add space between the sections */
+    width: 100%;
+    /* Full width for mobile */
+    max-height: 100%;
+    /* Ensure it doesn't overflow the screen */
+  }
+
+  .contact-page,
+  .contact-form {
+    flex: none;
+    /* Prevent equal height for stacked sections */
+    width: 100%;
+    /* Full width for mobile */
+    margin: 0;
+    /* Remove side margins */
+  }
+
+  /* To make the whole body scrollable */
+  body {
+    overflow-y: auto;
+    /* Ensure the entire page is scrollable */
+    height: 100%;
+  }
+}
+
+.main-content h2 {
+  position: absolute;
+  top: 5px;
+  /* Distance from the top */
+  left: 20px;
+  /* Distance from the left */
+  font-size: 1.5rem;
+  /* Adjust the font size as needed */
+  font-weight: bold;
+  /* Make the header text bold */
+  color: white;
+  /* Set the text color */
+  z-index: 10;
+  /* Ensure the text is above other content */
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+  .main-content h2 {
+    position: absolute;
+    top: 5px;
+    /* Distance from the top */
+    left: 370px;
+    /* Distance from the left */
+    font-size: 2rem;
+    /* Larger text size for desktop */
+    font-weight: bold;
+    color: white;
+    z-index: 10;
+  }
+}

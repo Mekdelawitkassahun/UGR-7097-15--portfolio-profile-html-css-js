@@ -1,0 +1,348 @@
+/* General Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(to bottom, #715a57, #958381, #b8adab);
+  color: white;
+  position: relative;
+  overflow: scroll;
+}
+
+/* Sidebar Styles (Desktop Only) */
+.sidebar {
+  width: 20%;
+  background-color: #3e2723;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  /* left: -100%; 
+  transition: left 0.3s ease; */
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.sidebar p {
+  font-size: 1rem;
+  color: #d7ccc8;
+}
+.sidebar-nav {
+  margin-top: -30px;
+}
+.sidebar-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+  margin-top: -30px;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 15px;
+  display: block;
+  margin: 5px 0;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar-nav a:hover {
+  background-color: #5d4037;
+}
+
+.social-links {
+  margin-top: auto;
+  display: flex;
+  gap: 7px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-top: -130px;
+}
+
+/* Main Content Styling */
+.main-content {
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-content h2 {
+  font-size: 32px;
+  margin-top: -20px;
+  color: #ffffff;
+  margin-left: 400px; /* Reset the negative margin */
+  text-align: left; /* Ensure text aligns to the left */
+}
+
+.skills-page {
+  padding: 20px;
+  max-width: 600px; /* Reduced width */
+  margin: 0 auto;
+  position: relative; /* Allow positioning */
+  left: 20%; /* Move the section to the right */
+  text-align: left; /* Ensure text alignment */
+}
+.skil-p {
+  width: 50%;
+  margin-left: 450px;
+  text-align: start;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between; /* Space between the two columns */
+  padding: 20px;
+  height: 250px;
+  margin: 0 auto;
+  border: 3px solid white;
+  width: 510px;
+}
+
+.skills-column {
+  flex: 2; /* Each column takes equal width */
+  margin: 0 10px; /* Add some space between columns */
+}
+
+.skill {
+  margin-bottom: 40px; /* Add spacing between each skill */
+  margin-top: 40px;
+}
+
+.skill-bar {
+  background-color: black;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.skill-progress {
+  height: 100%;
+  background-color: whitesmoke; /* Change to your desired color */
+  border-radius: 5px;
+}
+/* Profile Card Styles */
+.profile-card {
+  width: auto;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.profile-card .profile-image {
+  width: 150px;
+  height: 170px;
+  border-radius: 50%;
+  margin-top: 20px;
+  object-fit: cover;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card .name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.profile-card .title {
+  font-size: 1rem;
+  color: #f5e6e8;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: -6px;
+}
+
+.profile-card .social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.profile-card .social-links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.profile-card .social-links a:hover {
+  background: #8d6e63;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    padding: 10px; /* Reduced padding for mobile */
+  }
+
+  .main-content h2 {
+    font-size: 28px; /* Adjust font size for mobile */
+    margin-top: 0; /* Remove any top margin */
+    margin-left: 0; /* Remove left margin */
+    position: absolute; /* Use absolute positioning */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+    text-align: left; /* Ensure the text aligns to the left */
+    width: 100%; /* Ensure it doesn't exceed container width */
+  }
+
+  .skills-container {
+    display: flex;
+    justify-content: space-between; /* Space between the two columns */
+    padding: 20px;
+    height: 250px;
+    margin: 0 auto;
+    border: 3px solid white;
+    width: auto;
+  }
+
+  .skil-p {
+    margin-top: 40px;
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-icon {
+    display: block; /* Show the icon on mobile */
+    position: absolute;
+    top: 20px; /* Position it 20px from the top */
+    right: 5px; /* Position it 20px from the right */
+    font-size: 1.5rem; /* Icon size */
+    color: white; /* Icon color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    z-index: 1000; /* Ensure it's on top of other elements */
+  }
+
+  .sidebar.active {
+    display: block;
+    height: auto;
+    margin-top: -190px;
+    margin-right: -190px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+  }
+
+  .sidebar .profile-card,
+  .sidebar .social-links {
+    display: none; /* Hide the profile and social links in mobile view */
+  }
+
+  .sidebar-nav {
+    display: block; /* Only show the navigation links */
+  }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar.active {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .sidebar .profile-card,
+  .sidebar .social-links {
+    display: none; /* Hide the profile and social links in mobile view */
+  }
+
+  .sidebar-nav {
+    display: block; /* Only show the navigation links */
+  }
+
+  .main-content h2 {
+    font-size: 32px;
+    margin-top: -10px;
+    color: #ffffff;
+    margin-left: 10px; /* Reset the negative margin */
+
+    text-align: left; /* Ensure text aligns to the left */
+  }
+
+  .skil-p {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+  }
+}
